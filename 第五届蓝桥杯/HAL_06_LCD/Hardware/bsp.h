@@ -5,7 +5,7 @@ struct Channel_para{
 	int channel_req;
 	int N;
 };
-
+#include "main.h"
 
 struct Usart_get_data{
 	int channel;
@@ -19,5 +19,6 @@ void Frq_setting(void);
 void key_proc(void);
 void led_display(void);
 void frq_init(void);
+void led_dispaly(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
 #endif
 

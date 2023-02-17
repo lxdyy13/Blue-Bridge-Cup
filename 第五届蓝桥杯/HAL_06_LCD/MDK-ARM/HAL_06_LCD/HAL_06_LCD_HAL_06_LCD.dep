@@ -35,7 +35,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x63D1376A)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x63D1376A)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x63D1376A)
 I (../Inc/fonts.h)(0x5FEBE0AA)
-F (../Src/main.c)(0x63DE125F)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Hardware-I.\RTE\_HAL_06_LCD-IC:\Users\22586\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\22586\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32G431xx -DUSE_HAL_DRIVER -DSTM32G431xx-o hal_06_lcd\main.o --omf_browse hal_06_lcd\main.crf --depend hal_06_lcd\main.d)
+F (../Src/main.c)(0x63E3227E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Hardware-I.\RTE\_HAL_06_LCD-IC:\Users\22586\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\22586\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32G431xx -DUSE_HAL_DRIVER -DSTM32G431xx-o hal_06_lcd\main.o --omf_browse hal_06_lcd\main.crf --depend hal_06_lcd\main.d)
 I (../Inc/main.h)(0x63DCB91F)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x63D1376A)
 I (../Inc/stm32g4xx_hal_conf.h)(0x63DCB91F)
@@ -73,7 +73,7 @@ I (../Inc/tim.h)(0x63DCB91E)
 I (../Inc/usart.h)(0x63DCB91F)
 I (../Inc/gpio.h)(0x63DCB91D)
 I (../Hardware/interrupt.h)(0x63DC7D17)
-I (../Hardware/bsp.h)(0x63DDFC94)
+I (../Hardware/bsp.h)(0x63E32074)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (../Hardware/i2c_hal.h)(0x63DDBDF7)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
