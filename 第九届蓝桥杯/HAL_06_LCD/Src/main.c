@@ -230,7 +230,6 @@ void key_proc(){
 		{
 			case 1:
 			{
-				all_text++;
 				counter_temp[lcd_cut].sec++;
 				if(counter_temp[lcd_cut].sec>60)
 					counter_temp[lcd_cut].sec=0;
@@ -258,24 +257,27 @@ void key_proc(){
 	{
 		switch(counter[lcd_cut].change_highlight)
 		{
-			case 1:
-			{
-				counter_temp[lcd_cut].sec++;
-				if(counter_temp[lcd_cut].sec>60)
-					counter_temp[lcd_cut].sec=0;
-			}break;
-			case 2:
-			{
-				counter_temp[lcd_cut].min++;
-				if(counter_temp[lcd_cut].min>60)
-					counter_temp[lcd_cut].min=0;
-			}break;
-			case 3:
-			{
-				counter_temp[lcd_cut].hour++;
-				if(counter_temp[lcd_cut].hour>=24)
-					counter_temp[lcd_cut].hour=0;
-			}break;		
+			case 1:(counter_temp[lcd_cut].sec>59)?(counter_temp[lcd_cut].sec=0):(counter_temp[lcd_cut].sec=counter_temp[lcd_cut].sec+1);break;
+			case 2:(counter_temp[lcd_cut].min>59)?(counter_temp[lcd_cut].min=0):(counter_temp[lcd_cut].min=counter_temp[lcd_cut].min+1);break;
+			case 3:(counter_temp[lcd_cut].hour>23)?(counter_temp[lcd_cut].hour=0):(counter_temp[lcd_cut].hour=counter_temp[lcd_cut].hour+1);break;
+//			case 1:
+//			{
+//				counter_temp[lcd_cut].sec++;
+//				if(counter_temp[lcd_cut].sec>60)
+//					counter_temp[lcd_cut].sec=0;
+//			}000000000000000000000000break;
+//			case 2:
+//			{
+//				counter_temp[lcd_cut].min++;
+//				if(counter_temp[lcd_cut].min>60)
+//					counter_temp[lcd_cut].min=0;
+//			}break;
+//			case 3:
+//			{
+//				counter_temp[lcd_cut].hour++;
+//				if(counter_temp[lcd_cut].hour>=24)
+//					counter_temp[lcd_cut].hour=0;
+//			}break;		
 		};
 		key[2].long_flag=0;
 	}
@@ -341,11 +343,12 @@ void highlight(char *str,u8 line, u8 column){
 	LCD_DisplayChar(line,320-(16*column),str[column]);
 	LCD_SetBackColor(White);
 }
+
 void highlight_double(char *str,u8 line, u8 column){
 	int i=0;
 	for(i=0;i<20;i++)
 	{
-		if(i!=column)
+		if(i!=column||i!=(column+1))
 			LCD_DisplayChar(line,320-(16*i),str[i]);
 	}
 	LCD_SetBackColor(Yellow);
@@ -362,102 +365,30 @@ void lcd_proc(){
 		///////////line2
 			LCD_SetTextColor(Black);
 			if(lcd_setting)
-				sprintf(text,"   %d:%d:%d                            ",counter_temp[lcd_cut].hour,counter_temp[lcd_cut].min,counter_temp[lcd_cut].sec);
+				sprintf(text,"   %02d:%02d:%02d                            ",counter_temp[lcd_cut].hour,counter_temp[lcd_cut].min,counter_temp[lcd_cut].sec);
 			else
-				sprintf(text,"   %d:%d:%d                            ",counter[lcd_cut].hour,counter[lcd_cut].min,counter[lcd_cut].sec);
-			LCD_DisplayStringLine(Line2,(unsigned char *)text);
+				sprintf(text,"   %02d:%02d:%02d                            ",counter[lcd_cut].hour,counter[lcd_cut].min,counter[lcd_cut].sec);
+			
 			if(counter[lcd_cut].flag==1)
 			{
 				switch(counter[lcd_cut].change_highlight)
 				{
 					case 1://sec
 					{	
-						if(counter[lcd_cut].hour<10)
-						{
-							if(counter[lcd_cut].min<10)
-							{
-								if(counter[lcd_cut].sec<10)
-								{
-									highlight(text,Line2, 7);
-								}
-								else
-								{
-									highlight(text,Line2, 7);
-								}
-							}
-							else
-							{
-								if(counter[lcd_cut].sec<10)
-								{
-									highlight(text,Line2, 9);
-								}
-								else
-								{
-									highlight(text,Line2, 9);
-								}
-							}
-						}
-						else
-						{
-							if(counter[lcd_cut].min<10)
-							{
-								if(counter[lcd_cut].sec<10)
-								{
-									highlight(text,Line2, 8);
-								}
-								else
-								{
-									highlight(text,Line2, 8);
-								}
-							}
-							else
-							{
-								if(counter[lcd_cut].sec<10)
-								{
-									highlight(text,Line2, 10);
-								}
-								else
-								{
-									highlight(text,Line2, 10);
-								}
-							}
-						}
-					}
-					break;
+						highlight_double(text,Line2, 9);//9 10
+					}break;
 					case 2://min
 					{
-						if(counter[lcd_cut].hour<10)
-						{
-							if(counter[lcd_cut].min<10)
-							{
-								highlight(text,Line2, 6);
-							}
-							else
-							{
-								highlight(text,Line2, 6);
-							}
-						}
-						else
-						{
-							if(counter[lcd_cut].min<10)
-							{
-								highlight(text,Line2, 7);
-							}
-							else
-							{
-								highlight(text,Line2, 7);
-							}
-						}
+						highlight_double(text,Line2, 6);
 					}break;
 					case 3://hour
 					{
-						if(counter[lcd_cut].hour<10)
-							highlight(text,Line2, 4);
-						else
-							highlight(text,Line2, 4);
+						highlight_double(text,Line2, 3);
 					}break;
 				}
 			}
+			else
+				LCD_DisplayStringLine(Line2,(unsigned char *)text);
 			///////////////////line4
 			LCD_SetTextColor(Black);
 			if(lcd_setting)

@@ -98,9 +98,9 @@ Section Cross References
     main.o(i.key_proc) refers to main.o(.bss) for .bss
     main.o(i.key_proc) refers to main.o(.data) for .data
     main.o(i.lcd_proc) refers to lcd.o(i.LCD_SetTextColor) for LCD_SetTextColor
-    main.o(i.lcd_proc) refers to printf1.o(i.__0sprintf$1) for __2sprintf
+    main.o(i.lcd_proc) refers to printf6.o(i.__0sprintf$6) for __2sprintf
     main.o(i.lcd_proc) refers to lcd.o(i.LCD_DisplayStringLine) for LCD_DisplayStringLine
-    main.o(i.lcd_proc) refers to main.o(i.highlight) for highlight
+    main.o(i.lcd_proc) refers to main.o(i.highlight_double) for highlight_double
     main.o(i.lcd_proc) refers to main.o(.data) for .data
     main.o(i.lcd_proc) refers to main.o(.bss) for .bss
     main.o(i.led_disp) refers to stm32g4xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
@@ -862,7 +862,7 @@ Removing Unused input sections from the image.
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
     Removing main.o(.rrx_text), (6 bytes).
-    Removing main.o(i.highlight_double), (98 bytes).
+    Removing main.o(i.highlight), (78 bytes).
     Removing main.o(i.pwm_proc), (24 bytes).
     Removing main.o(.data), (4 bytes).
     Removing gpio.o(.rev16_text), (4 bytes).
@@ -1348,7 +1348,7 @@ Removing Unused input sections from the image.
     Removing cdrcmple.o(.text), (48 bytes).
     Removing depilogue.o(.text), (186 bytes).
 
-505 unused section(s) (total 34512 bytes) removed from the image.
+505 unused section(s) (total 34492 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1383,42 +1383,42 @@ Image Symbol Table
     ../Src/stm32g4xx_it.c                    0x00000000   Number         0  stm32g4xx_it.o ABSOLUTE
     ../Src/system_stm32g4xx.c                0x00000000   Number         0  system_stm32g4xx.o ABSOLUTE
     ../Src/tim.c                             0x00000000   Number         0  tim.o ABSOLUTE
-    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/fputc.c           0x00000000   Number         0  fputc.o ABSOLUTE
     ../clib/microlib/stdio/semi.s            0x00000000   Number         0  semi.o ABSOLUTE
     ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
-    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusesemip.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
     ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
@@ -1595,29 +1595,33 @@ Image Symbol Table
     i.TIM_TI2_ConfigInputStage               0x08002f06   Section        0  stm32g4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
     TIM_TI2_ConfigInputStage                 0x08002f07   Thumb Code    36  stm32g4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
     i.UsageFault_Handler                     0x08002f2a   Section        0  stm32g4xx_it.o(i.UsageFault_Handler)
-    i.__0sprintf$1                           0x08002f2c   Section        0  printf1.o(i.__0sprintf$1)
+    i.__0sprintf$6                           0x08002f2c   Section        0  printf6.o(i.__0sprintf$6)
     i.__NVIC_SetPriority                     0x08002f54   Section        0  stm32g4xx_hal_cortex.o(i.__NVIC_SetPriority)
     __NVIC_SetPriority                       0x08002f55   Thumb Code    32  stm32g4xx_hal_cortex.o(i.__NVIC_SetPriority)
     i.__scatterload_copy                     0x08002f74   Section       14  handlers.o(i.__scatterload_copy)
     i.__scatterload_null                     0x08002f82   Section        2  handlers.o(i.__scatterload_null)
     i.__scatterload_zeroinit                 0x08002f84   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i._printf_core                           0x08002f94   Section        0  printf1.o(i._printf_core)
-    _printf_core                             0x08002f95   Thumb Code   336  printf1.o(i._printf_core)
-    i._sputc                                 0x080030e8   Section        0  printf1.o(i._sputc)
-    _sputc                                   0x080030e9   Thumb Code    10  printf1.o(i._sputc)
-    i.delay1                                 0x080030f2   Section        0  i2c_hal.o(i.delay1)
-    delay1                                   0x080030f3   Thumb Code    12  i2c_hal.o(i.delay1)
-    i.highlight                              0x080030fe   Section        0  main.o(i.highlight)
-    i.key_proc                               0x0800314c   Section        0  main.o(i.key_proc)
-    i.lcd_proc                               0x080034bc   Section        0  main.o(i.lcd_proc)
-    i.led_disp                               0x08003620   Section        0  main.o(i.led_disp)
-    i.led_off                                0x08003654   Section        0  main.o(i.led_off)
-    i.led_proc                               0x08003684   Section        0  main.o(i.led_proc)
-    i.main                                   0x080036c0   Section        0  main.o(i.main)
-    i.read_eeprom                            0x08003878   Section        0  i2c_hal.o(i.read_eeprom)
-    i.write_eeprom                           0x080038b8   Section        0  i2c_hal.o(i.write_eeprom)
-    .constdata                               0x080038e8   Section     4560  lcd.o(.constdata)
-    .constdata                               0x08004ab8   Section       16  system_stm32g4xx.o(.constdata)
+    i._printf_core                           0x08002f94   Section        0  printf6.o(i._printf_core)
+    _printf_core                             0x08002f95   Thumb Code   748  printf6.o(i._printf_core)
+    i._printf_post_padding                   0x08003284   Section        0  printf6.o(i._printf_post_padding)
+    _printf_post_padding                     0x08003285   Thumb Code    36  printf6.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x080032a8   Section        0  printf6.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x080032a9   Thumb Code    46  printf6.o(i._printf_pre_padding)
+    i._sputc                                 0x080032d6   Section        0  printf6.o(i._sputc)
+    _sputc                                   0x080032d7   Thumb Code    10  printf6.o(i._sputc)
+    i.delay1                                 0x080032e0   Section        0  i2c_hal.o(i.delay1)
+    delay1                                   0x080032e1   Thumb Code    12  i2c_hal.o(i.delay1)
+    i.highlight_double                       0x080032ec   Section        0  main.o(i.highlight_double)
+    i.key_proc                               0x08003354   Section        0  main.o(i.key_proc)
+    i.lcd_proc                               0x080036c8   Section        0  main.o(i.lcd_proc)
+    i.led_disp                               0x08003808   Section        0  main.o(i.led_disp)
+    i.led_off                                0x0800383c   Section        0  main.o(i.led_off)
+    i.led_proc                               0x0800386c   Section        0  main.o(i.led_proc)
+    i.main                                   0x080038a8   Section        0  main.o(i.main)
+    i.read_eeprom                            0x08003a60   Section        0  i2c_hal.o(i.read_eeprom)
+    i.write_eeprom                           0x08003aa0   Section        0  i2c_hal.o(i.write_eeprom)
+    .constdata                               0x08003ad0   Section     4560  lcd.o(.constdata)
+    .constdata                               0x08004ca0   Section       16  system_stm32g4xx.o(.constdata)
     .data                                    0x20000000   Section        6  lcd.o(.data)
     TextColor                                0x20000000   Data           2  lcd.o(.data)
     BackColor                                0x20000002   Data           2  lcd.o(.data)
@@ -1878,25 +1882,25 @@ Image Symbol Table
     TIM_ETR_SetConfig                        0x08002b8f   Thumb Code    20  stm32g4xx_hal_tim.o(i.TIM_ETR_SetConfig)
     TIM_OC2_SetConfig                        0x08002c55   Thumb Code   120  stm32g4xx_hal_tim.o(i.TIM_OC2_SetConfig)
     UsageFault_Handler                       0x08002f2b   Thumb Code     2  stm32g4xx_it.o(i.UsageFault_Handler)
-    __0sprintf$1                             0x08002f2d   Thumb Code    34  printf1.o(i.__0sprintf$1)
-    __1sprintf$1                             0x08002f2d   Thumb Code     0  printf1.o(i.__0sprintf$1)
-    __2sprintf                               0x08002f2d   Thumb Code     0  printf1.o(i.__0sprintf$1)
+    __0sprintf$6                             0x08002f2d   Thumb Code    34  printf6.o(i.__0sprintf$6)
+    __1sprintf$6                             0x08002f2d   Thumb Code     0  printf6.o(i.__0sprintf$6)
+    __2sprintf                               0x08002f2d   Thumb Code     0  printf6.o(i.__0sprintf$6)
     __scatterload_copy                       0x08002f75   Thumb Code    14  handlers.o(i.__scatterload_copy)
     __scatterload_null                       0x08002f83   Thumb Code     2  handlers.o(i.__scatterload_null)
     __scatterload_zeroinit                   0x08002f85   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    highlight                                0x080030ff   Thumb Code    78  main.o(i.highlight)
-    key_proc                                 0x0800314d   Thumb Code   868  main.o(i.key_proc)
-    lcd_proc                                 0x080034bd   Thumb Code   234  main.o(i.lcd_proc)
-    led_disp                                 0x08003621   Thumb Code    46  main.o(i.led_disp)
-    led_off                                  0x08003655   Thumb Code    40  main.o(i.led_off)
-    led_proc                                 0x08003685   Thumb Code    52  main.o(i.led_proc)
-    main                                     0x080036c1   Thumb Code   422  main.o(i.main)
-    read_eeprom                              0x08003879   Thumb Code    64  i2c_hal.o(i.read_eeprom)
-    write_eeprom                             0x080038b9   Thumb Code    48  i2c_hal.o(i.write_eeprom)
-    ASCII_Table                              0x080038e8   Data        4560  lcd.o(.constdata)
-    AHBPrescTable                            0x08004ab8   Data          16  system_stm32g4xx.o(.constdata)
-    Region$$Table$$Base                      0x08004ac8   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08004ae8   Number         0  anon$$obj.o(Region$$Table)
+    highlight_double                         0x080032ed   Thumb Code   104  main.o(i.highlight_double)
+    key_proc                                 0x08003355   Thumb Code   870  main.o(i.key_proc)
+    lcd_proc                                 0x080036c9   Thumb Code   192  main.o(i.lcd_proc)
+    led_disp                                 0x08003809   Thumb Code    46  main.o(i.led_disp)
+    led_off                                  0x0800383d   Thumb Code    40  main.o(i.led_off)
+    led_proc                                 0x0800386d   Thumb Code    52  main.o(i.led_proc)
+    main                                     0x080038a9   Thumb Code   422  main.o(i.main)
+    read_eeprom                              0x08003a61   Thumb Code    64  i2c_hal.o(i.read_eeprom)
+    write_eeprom                             0x08003aa1   Thumb Code    48  i2c_hal.o(i.write_eeprom)
+    ASCII_Table                              0x08003ad0   Data        4560  lcd.o(.constdata)
+    AHBPrescTable                            0x08004ca0   Data          16  system_stm32g4xx.o(.constdata)
+    Region$$Table$$Base                      0x08004cb0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08004cd0   Number         0  anon$$obj.o(Region$$Table)
     dummy                                    0x20000004   Data           2  lcd.o(.data)
     led_flag                                 0x20000008   Data           1  main.o(.data)
     pwm_flag                                 0x20000009   Data           1  main.o(.data)
@@ -1930,9 +1934,9 @@ Memory Map of the image
 
   Image Entry point : 0x080001d9
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004b18, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004d00, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00004ae8, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00004cd0, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2074,38 +2078,40 @@ Memory Map of the image
     0x08002ee4   0x08002ee4   0x00000022   Code   RO         2849    i.TIM_TI1_ConfigInputStage  stm32g4xx_hal_tim.o
     0x08002f06   0x08002f06   0x00000024   Code   RO         2851    i.TIM_TI2_ConfigInputStage  stm32g4xx_hal_tim.o
     0x08002f2a   0x08002f2a   0x00000002   Code   RO          577    i.UsageFault_Handler  stm32g4xx_it.o
-    0x08002f2c   0x08002f2c   0x00000028   Code   RO         3931    i.__0sprintf$1      mc_w.l(printf1.o)
+    0x08002f2c   0x08002f2c   0x00000028   Code   RO         4041    i.__0sprintf$6      mc_w.l(printf6.o)
     0x08002f54   0x08002f54   0x00000020   Code   RO         2617    i.__NVIC_SetPriority  stm32g4xx_hal_cortex.o
     0x08002f74   0x08002f74   0x0000000e   Code   RO         4191    i.__scatterload_copy  mc_w.l(handlers.o)
     0x08002f82   0x08002f82   0x00000002   Code   RO         4192    i.__scatterload_null  mc_w.l(handlers.o)
     0x08002f84   0x08002f84   0x0000000e   Code   RO         4193    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x08002f92   0x08002f92   0x00000002   PAD
-    0x08002f94   0x08002f94   0x00000154   Code   RO         3936    i._printf_core      mc_w.l(printf1.o)
-    0x080030e8   0x080030e8   0x0000000a   Code   RO         3938    i._sputc            mc_w.l(printf1.o)
-    0x080030f2   0x080030f2   0x0000000c   Code   RO          700    i.delay1            i2c_hal.o
-    0x080030fe   0x080030fe   0x0000004e   Code   RO          329    i.highlight         main.o
-    0x0800314c   0x0800314c   0x00000370   Code   RO          331    i.key_proc          main.o
-    0x080034bc   0x080034bc   0x00000164   Code   RO          332    i.lcd_proc          main.o
-    0x08003620   0x08003620   0x00000034   Code   RO          333    i.led_disp          main.o
-    0x08003654   0x08003654   0x00000030   Code   RO          334    i.led_off           main.o
-    0x08003684   0x08003684   0x0000003c   Code   RO          335    i.led_proc          main.o
-    0x080036c0   0x080036c0   0x000001b8   Code   RO          336    i.main              main.o
-    0x08003878   0x08003878   0x00000040   Code   RO          701    i.read_eeprom       i2c_hal.o
-    0x080038b8   0x080038b8   0x00000030   Code   RO          702    i.write_eeprom      i2c_hal.o
-    0x080038e8   0x080038e8   0x000011d0   Data   RO           44    .constdata          lcd.o
-    0x08004ab8   0x08004ab8   0x00000010   Data   RO          798    .constdata          system_stm32g4xx.o
-    0x08004ac8   0x08004ac8   0x00000020   Data   RO         4189    Region$$Table       anon$$obj.o
+    0x08002f94   0x08002f94   0x000002f0   Code   RO         4046    i._printf_core      mc_w.l(printf6.o)
+    0x08003284   0x08003284   0x00000024   Code   RO         4047    i._printf_post_padding  mc_w.l(printf6.o)
+    0x080032a8   0x080032a8   0x0000002e   Code   RO         4048    i._printf_pre_padding  mc_w.l(printf6.o)
+    0x080032d6   0x080032d6   0x0000000a   Code   RO         4050    i._sputc            mc_w.l(printf6.o)
+    0x080032e0   0x080032e0   0x0000000c   Code   RO          700    i.delay1            i2c_hal.o
+    0x080032ec   0x080032ec   0x00000068   Code   RO          330    i.highlight_double  main.o
+    0x08003354   0x08003354   0x00000374   Code   RO          331    i.key_proc          main.o
+    0x080036c8   0x080036c8   0x00000140   Code   RO          332    i.lcd_proc          main.o
+    0x08003808   0x08003808   0x00000034   Code   RO          333    i.led_disp          main.o
+    0x0800383c   0x0800383c   0x00000030   Code   RO          334    i.led_off           main.o
+    0x0800386c   0x0800386c   0x0000003c   Code   RO          335    i.led_proc          main.o
+    0x080038a8   0x080038a8   0x000001b8   Code   RO          336    i.main              main.o
+    0x08003a60   0x08003a60   0x00000040   Code   RO          701    i.read_eeprom       i2c_hal.o
+    0x08003aa0   0x08003aa0   0x00000030   Code   RO          702    i.write_eeprom      i2c_hal.o
+    0x08003ad0   0x08003ad0   0x000011d0   Data   RO           44    .constdata          lcd.o
+    0x08004ca0   0x08004ca0   0x00000010   Data   RO          798    .constdata          system_stm32g4xx.o
+    0x08004cb0   0x08004cb0   0x00000020   Data   RO         4189    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08004ae8, Size: 0x00000770, Max: 0x00008000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08004cd0, Size: 0x00000770, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08004ae8   0x00000006   Data   RW           45    .data               lcd.o
-    0x20000006   0x08004aee   0x00000002   PAD
-    0x20000008   0x08004af0   0x00000018   Data   RW          339    .data               main.o
-    0x20000020   0x08004b08   0x00000004   Data   RW          800    .data               system_stm32g4xx.o
-    0x20000024   0x08004b0c   0x0000000c   Data   RW         1360    .data               stm32g4xx_hal.o
+    0x20000000   0x08004cd0   0x00000006   Data   RW           45    .data               lcd.o
+    0x20000006   0x08004cd6   0x00000002   PAD
+    0x20000008   0x08004cd8   0x00000018   Data   RW          339    .data               main.o
+    0x20000020   0x08004cf0   0x00000004   Data   RW          800    .data               system_stm32g4xx.o
+    0x20000024   0x08004cf4   0x0000000c   Data   RW         1360    .data               stm32g4xx_hal.o
     0x20000030        -       0x00000234   Zero   RW          338    .bss                main.o
     0x20000264        -       0x00000028   Zero   RW          467    .bss                rtc.o
     0x2000028c        -       0x000000e4   Zero   RW          512    .bss                tim.o
@@ -2119,29 +2125,29 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       288         18          0          0          0       1031   gpio.o
-       628         22          0          0          0       7403   i2c_hal.o
-      1766         76       4560          6          0     654822   lcd.o
-      2306        206          0         24        564       8289   main.o
-       244         22          0          0         40       1643   rtc.o
-        36          8        472          0       1024        832   startup_stm32g431xx.o
-       162         24          0         12          0       4305   stm32g4xx_hal.o
-       198         14          0          0          0      33927   stm32g4xx_hal_cortex.o
-       476         34          0          0          0       3087   stm32g4xx_hal_gpio.o
-        56          8          0          0          0       8666   stm32g4xx_hal_msp.o
-       188         14          0          0          0        838   stm32g4xx_hal_pwr_ex.o
-      1624         68          0          0          0       4770   stm32g4xx_hal_rcc.o
-       648         10          0          0          0       1868   stm32g4xx_hal_rcc_ex.o
-      1242         62          0          0          0       8697   stm32g4xx_hal_rtc.o
-         2          0          0          0          0        960   stm32g4xx_hal_rtc_ex.o
-      2652        228          0          0          0      18538   stm32g4xx_hal_tim.o
-       342         32          0          0          0       6296   stm32g4xx_hal_tim_ex.o
-        56         18          0          0          0       5443   stm32g4xx_it.o
-        28          6         16          4          0       1123   system_stm32g4xx.o
-       576         50          0          0        228       3734   tim.o
+       288         18          0          0          0       1063   gpio.o
+       628         22          0          0          0       7679   i2c_hal.o
+      1766         76       4560          6          0     655458   lcd.o
+      2300        214          0         24        564       8480   main.o
+       244         22          0          0         40       1719   rtc.o
+        36          8        472          0       1024        844   startup_stm32g431xx.o
+       162         24          0         12          0       4437   stm32g4xx_hal.o
+       198         14          0          0          0      34043   stm32g4xx_hal_cortex.o
+       476         34          0          0          0       3167   stm32g4xx_hal_gpio.o
+        56          8          0          0          0       8726   stm32g4xx_hal_msp.o
+       188         14          0          0          0        854   stm32g4xx_hal_pwr_ex.o
+      1624         68          0          0          0       4850   stm32g4xx_hal_rcc.o
+       648         10          0          0          0       1908   stm32g4xx_hal_rcc_ex.o
+      1242         62          0          0          0       8901   stm32g4xx_hal_rtc.o
+         2          0          0          0          0       1000   stm32g4xx_hal_rtc_ex.o
+      2652        228          0          0          0      18990   stm32g4xx_hal_tim.o
+       342         32          0          0          0       6484   stm32g4xx_hal_tim_ex.o
+        56         18          0          0          0       5667   stm32g4xx_it.o
+        28          6         16          4          0       1183   system_stm32g4xx.o
+       576         50          0          0        228       3866   tim.o
 
     ----------------------------------------------------------------------
-     13538        920       5080         48       1856     776272   Object Totals
+     13532        928       5080         48       1856     779319   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         20          0          0          2          0          0   (incl. Padding)
 
@@ -2160,21 +2166,21 @@ Image component sizes
         30          0          0          0          0          0   handlers.o
         36          8          0          0          0         68   init.o
         36          0          0          0          0        108   memseta.o
-       390         10          0          0          0        252   printf1.o
+       884         10          0          0          0        420   printf6.o
         44          0          0          0          0         80   uidiv.o
 
     ----------------------------------------------------------------------
-       558         26          0          0          0        508   Library Totals
+      1052         26          0          0          0        676   Library Totals
          2          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-       556         26          0          0          0        508   mc_w.l
+      1050         26          0          0          0        676   mc_w.l
 
     ----------------------------------------------------------------------
-       558         26          0          0          0        508   Library Totals
+      1052         26          0          0          0        676   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -2183,15 +2189,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     14096        946       5080         48       1856     765028   Grand Totals
-     14096        946       5080         48       1856     765028   ELF Image Totals
-     14096        946       5080         48          0          0   ROM Totals
+     14584        954       5080         48       1856     768139   Grand Totals
+     14584        954       5080         48       1856     768139   ELF Image Totals
+     14584        954       5080         48          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                19176 (  18.73kB)
+    Total RO  Size (Code + RO Data)                19664 (  19.20kB)
     Total RW  Size (RW Data + ZI Data)              1904 (   1.86kB)
-    Total ROM Size (Code + RO Data + RW Data)      19224 (  18.77kB)
+    Total ROM Size (Code + RO Data + RW Data)      19712 (  19.25kB)
 
 ==============================================================================
 
